@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اقتطاع عينات المصبرات والمعلبات</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@600&display=swap');
+
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            background-image: url('tomateconserve.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: rgba(44, 62, 80, 0.8);
+            color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .header h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .header h2 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.8em;
+            margin: 10px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .header h3 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.4em;
+            margin: 5px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: rgba(236, 240, 241, 0.9);
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+        select:focus {
+            border-color: #2980b9;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+        }
+        .details {
+            display: none;
+            opacity: 0;
+            padding: 20px;
+            background-color: rgba(236, 240, 241, 0.9);
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.5s ease, transform 0.3s ease;
+        }
+        .details h2 {
+            color: #34495e;
+            margin-top: 0;
+            font-size: 1.8em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .details p {
+            margin: 10px 0;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .details ul {
+            margin: 10px 0;
+            padding-left: 20px;
+            color: #2c3e50;
+        }
+        .details ul li {
+            margin-bottom: 5px;
+        }
+        .details strong {
+            color: #2980b9;
+        }
+        .details:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .regulations {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(236, 240, 241, 0.9);
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .regulations h2 {
+            color: #34495e;
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+        .regulations ul {
+            padding-left: 20px;
+        }
+        .regulations ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>الجمهورية الجزائرية الديمقراطية الشعبية</h1>
+    <h2>وزارة التجارة الداخلية وضبط السوق الوطنية</h2>
+    <h3>المديرية العامة للرقابة الاقتصادية وقمع الغش</h3>
+</div>
+
+<div class="container">
+    <h1 style="color: #2c3e50; text-align: center;">اقتطاع عينات المصبرات والمعلبات</h1>
+
+    <select id="productSelect" onchange="showDetails()">
+        <option value="">اختر منتجًا</option>
+        <option value="tomato">معجون الطماطم</option>
+        <option value="jam">المربى</option>
+        <option value="mayonnaise">المايونيز</option>
+        <option value="pickles">المخللات</option>
+        <option value="sauce">الصلصات</option>
+    </select>
+
+    <div id="tomato" class="details">
+        <h2>طريقة اقتطاع عينات معجون الطماطم</h2>
+        <p><strong>حجم/وزن العينة:</strong> 300 جرام لكل عينة</p>
+        <p><strong>الأدوات:</strong> قفازات معقمة، عبوات بلاستيكية معقمة، ملعقة معقمة.</p>
+        <p><strong>عدد العينات الممثلة:</strong> 5 عينات من كل دفعة.</p>
+        <p><strong>التحديدات الفيزيوكيميائية:</strong> نسبة الصلصة، نسبة المواد الحافظة، درجة الحموضة.</p>
+        <p><strong>التحديدات الميكروبيولوجية:</strong> العد البكتيري الكلي، وجود الفطريات، وجود الخمائر.</p>
+        <p><strong>حفظ العينات:</strong> حفظ في ثلاجة عند 4°م.</p>
+        <p><strong>نقل العينات:</strong> استخدام صناديق تبريد مع أكياس ثلج.</p>
+        <p><strong>المدة اللازمة للتحليل:</strong></p>
+        <ul>
+            <li>الفيزيوكيميائية: 24-48 ساعة.</li>
+            <li>الميكروبيولوجية: 3-5 أيام.</li>
+        </ul>
+    </div>
+
+    <div id="jam" class="details">
+        <h2>طريقة اقتطاع عينات المربى</h2>
+        <p><strong>حجم/وزن العينة:</strong> 250 جرام لكل عينة</p>
+        <p><strong>الأدوات:</strong> قفازات معقمة، عبوات بلاستيكية معقمة، ملعقة معقمة.</p>
+        <p><strong>عدد العينات الممثلة:</strong> 5 عينات من كل دفعة.</p>
+        <p><strong>التحديدات الفيزيوكيميائية:</strong> نسبة السكر، نسبة الفاكهة، درجة الحموضة.</p>
+        <p><strong>التحديدات الميكروبيولوجية:</strong> العد البكتيري الكلي، وجود الفطريات، وجود الخمائر.</p>
+        <p><strong>حفظ العينات:</strong> حفظ في ثلاجة عند 4°م.</p>
+        <p><strong>نقل العينات:</strong> استخدام صناديق تبريد مع أكياس ثلج.</p>
+        <p><strong>المدة اللازمة للتحليل:</strong></p>
+        <ul>
+            <li>الفيزيوكيميائية: 24-48 ساعة.</li>
+            <li>الميكروبيولوجية: 3-5 أيام.</li>
+        </ul>
+    </div>
+
+    <div id="mayonnaise" class="details">
+        <h2>طريقة اقتطاع عينات المايونيز</h2>
+        <p><strong>حجم/وزن العينة:</strong> 200 جرام لكل عينة</p>
+        <p><strong>الأدوات:</strong> قفازات معقمة، عبوات بلاستيكية معقمة، ملعقة معقمة.</p>
+        <p><strong>عدد العينات الممثلة:</strong> 5 عينات من كل دفعة.</p>
+        <p><strong>التحديدات الفيزيوكيميائية:</strong> نسبة الدهون، نسبة البيض، درجة الحموضة.</p>
+        <p><strong>التحديدات الميكروبيولوجية:</strong> العد البكتيري الكلي، وجود السالمونيلا، وجود الليستيريا.</p>
+        <p><strong>حفظ العينات:</strong> حفظ في ثلاجة عند 4°م.</p>
+        <p><strong>نقل العينات:</strong> استخدام صناديق تبريد مع أكياس ثلج.</p>
+        <p><strong>المدة اللازمة للتحليل:</strong></p>
+        <ul>
+            <li>الفيزيوكيميائية: 24-48 ساعة.</li>
+            <li>الميكروبيولوجية: 3-5 أيام.</li>
+        </ul>
+    </div>
+
+    <div id="pickles" class="details">
+        <h2>طريقة اقتطاع عينات المخللات</h2>
+        <p><strong>حجم/وزن العينة:</strong> 300 جرام لكل عينة</p>
+        <p><strong>الأدوات:</strong> قفازات معقمة، عبوات بلاستيكية معقمة، ملعقة معقمة.</p>
+        <p><strong>عدد العينات الممثلة:</strong> 5 عينات من كل دفعة.</p>
+        <p><strong>التحديدات الفيزيوكيميائية:</strong> نسبة الملح، درجة الحموضة، نسبة المواد الحافظة.</p>
+        <p><strong>التحديدات الميكروبيولوجية:</strong> العد البكتيري الكلي، وجود الفطريات، وجود الخمائر.</p>
+        <p><strong>حفظ العينات:</strong> حفظ في ثلاجة عند 4°م.</p>
+        <p><strong>نقل العينات:</strong> استخدام صناديق تبريد مع أكياس ثلج.</p>
+        <p><strong>المدة اللازمة للتحليل:</strong></p>
+        <ul>
+            <li>الفيزيوكيميائية: 24-48 ساعة.</li>
+            <li>الميكروبيولوجية: 3-5 أيام.</li>
+        </ul>
+    </div>
+
+    <div id="sauce" class="details">
+        <h2>طريقة اقتطاع عينات الصلصات</h2>
+        <p><strong>حجم/وزن العينة:</strong> 250 جرام لكل عينة</p>
+        <p><strong>الأدوات:</strong> قفازات معقمة، عبوات بلاستيكية معقمة، ملعقة معقمة.</p>
+        <p><strong>عدد العينات الممثلة:</strong> 5 عينات من كل دفعة.</p>
+        <p><strong>التحديدات الفيزيوكيميائية:</strong> نسبة السكر، نسبة الملح، درجة الحموضة.</p>
+        <p><strong>التحديدات الميكروبيولوجية:</strong> العد البكتيري الكلي، وجود الفطريات، وجود الخمائر.</p>
+        <p><strong>حفظ العينات:</strong> حفظ في ثلاجة عند 4°م.</p>
+        <p><strong>نقل العينات:</strong> استخدام صناديق تبريد مع أكياس ثلج.</p>
+        <p><strong>المدة اللازمة للتحليل:</strong></p>
+        <ul>
+            <li>الفيزيوكيميائية: 24-48 ساعة.</li>
+            <li>الميكروبيولوجية: 3-5 أيام.</li>
+        </ul>
+    </div>
+
+    <div class="regulations">
+        <h2>النظم واللوائح الفنية</h2>
+        <div id="tomatoRegulations">
+            <h3>معجون الطماطم</h3>
+            <ul>
+                <li><strong>المواصفات القياسية الجزائرية (NA):</strong> NA 33446 - مواصفات معجون الطماطم.</li>
+                <li><strong>المواصفات الدولية (ISO):</strong> ISO 22000 - نظام إدارة سلامة الغذاء.</li>
+            </ul>
+        </div>
+        <div id="jamRegulations">
+            <h3>المربى</h3>
+            <ul>
+                <li><strong>المواصفات القياسية الجزائرية (NA):</strong> NA 11224 - مواصفات المربى.</li>
+                <li><strong>المواصفات الدولية (ISO):</strong> ISO 11224 - معايير الفاكهة المحفوظة.</li>
+            </ul>
+        </div>
+        <div id="mayonnaiseRegulations">
+            <h3>المايونيز</h3>
+            <ul>
+                <li><strong>المواصفات القياسية الجزائرية (NA):</strong> NA 13580 - مواصفات المايونيز.</li>
+                <li><strong>المواصفات الدولية (ISO):</strong> ISO 13580 - معايير المستحلبات الغذائية.</li>
+            </ul>
+        </div>
+        <div id="picklesRegulations">
+            <h3>المخللات</h3>
+            <ul>
+                <li><strong>المواصفات القياسية الجزائرية (NA):</strong> NA 24681 - مواصفات المخللات.</li>
+                <li><strong>المواصفات الدولية (ISO):</strong> ISO 24681 - معايير التخليل.</li>
+            </ul>
+        </div>
+        <div id="sauceRegulations">
+            <h3>الصلصات</h3>
+            <ul>
+                <li><strong>المواصفات القياسية الجزائرية (NA):</strong> NA 33447 - مواصفات الصلصات.</li>
+                <li><strong>المواصفات الدولية (ISO):</strong> ISO 22000 - نظام إدارة سلامة الغذاء.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showDetails() {
+        var details = document.querySelectorAll('.details');
+        details.forEach(function(detail) {
+            detail.style.opacity = '0';
+            detail.style.display = 'none';
+        });
+
+        var selectedProduct = document.getElementById('productSelect').value;
+        if (selectedProduct) {
+            var selectedDetail = document.getElementById(selectedProduct);
+            selectedDetail.style.display = 'block';
+            setTimeout(function() {
+                selectedDetail.style.opacity = '1';
+            }, 10);
+        }
+    }
+</script>
+
+</body>
+</html>
